@@ -27,55 +27,55 @@ export const PatientFormDefaultValues = {
 };
 
 export const IdentificationTypes = [
-  "Birth Certificate",
-  "Driver's License",
+  "Aadhar Card",
+  "Ration Card",
+  "Driving License",
+  "Bank Passbook",
+  "Passport",
+  "Pan Card",
+  "Voter ID Card",
   "Medical Insurance Card/Policy",
   "Military ID Card",
-  "National Identity Card",
-  "Passport",
-  "Resident Alien Card (Green Card)",
-  "Social Security Card",
-  "State ID Card",
+  "Electricity Bill",
   "Student ID Card",
-  "Voter ID Card",
 ];
 
 export const Doctors = [
   {
-    image: "/assets/images/dr-green.png",
-    name: "John Green",
+    image: "/assets/images/adil.png",
+    name: "Adil Rasheed (Professor)",
   },
   {
-    image: "/assets/images/dr-cameron.png",
-    name: "Leila Cameron",
+    image: "/assets/images/arisha.png",
+    name: "Arisha Fatima (DM)",
   },
   {
-    image: "/assets/images/dr-livingston.png",
-    name: "David Livingston",
+    image: "/assets/images/dr-ajay.png",
+    name: "Ajay Singh (MBBS-MD)",
   },
   {
-    image: "/assets/images/dr-peter.png",
-    name: "Evan Peter",
+    image: "/assets/images/eram.png",
+    name: "Eram Kausar (MBBS)",
   },
   {
-    image: "/assets/images/dr-powell.png",
-    name: "Jane Powell",
+    image: "/assets/images/onais.png",
+    name: "Onais Ansari (BUMS-MD)",
   },
   {
-    image: "/assets/images/dr-remirez.png",
-    name: "Alex Ramirez",
+    image: "/assets/images/madhu.png",
+    name: "Madhu Srivastava (DNB)",
   },
   {
-    image: "/assets/images/dr-lee.png",
-    name: "Jasmine Lee",
+    image: "/assets/images/ram.png",
+    name: "Ram Kumar (MBBS-MS)",
   },
   {
-    image: "/assets/images/dr-cruz.png",
-    name: "Alyana Cruz",
+    image: "/assets/images/lata.png",
+    name: "Lata Haya (BHMS)",
   },
   {
     image: "/assets/images/dr-sharma.png",
-    name: "Hardik Sharma",
+    name: "Hardik Sharma (BAMS-MD)",
   },
 ];
 
