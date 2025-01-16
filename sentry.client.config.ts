@@ -1,30 +1,28 @@
 // This file configures the initialization of Sentry on the client.
-// The config you add here will be used whenever a users loads a page in their browser.
-// https://docs.sentry.io/platforms/javascript/guides/nextjs/
+// The config you add here will be used whenever a user loads a page in their browser.
+// Documentation: https://docs.sentry.io/platforms/javascript/guides/nextjs/
 
 import * as Sentry from "@sentry/nextjs";
 
 Sentry.init({
-  dsn: "https://fc7d0d2f5951190a164c7fdfb3f792b9@o4508647660584960.ingest.de.sentry.io/4508647665827920",
+  // Use an environment variable for the DSN to keep it secure
+  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN || "https://fc7d0d2f5951190a164c7fdfb3f792b9@o4508647660584960.ingest.de.sentry.io/4508647665827920",
 
-  // Adjust this value in production, or use tracesSampler for greater control
-  tracesSampleRate: 1,
+  // Adjust this value in production to control the percentage of transactions captured
+  tracesSampleRate: process.env.NODE_ENV === "production" ? 0.2 : 1.0, // Lower sample rate in production
 
-  // Setting this option to true will print useful information to the console while you're setting up Sentry.
-  debug: false,
+  // Enable debug mode for easier troubleshooting in non-production environments
+  debug: process.env.NODE_ENV !== "production",
 
-  replaysOnErrorSampleRate: 1.0,
+  // Capture session replays for errors and sessions
+  replaysOnErrorSampleRate: 1.0, // Capture 100% of errors
+  replaysSessionSampleRate: 0.1, // Capture 10% of sessions
 
-  // This sets the sample rate to be 10%. You may want this to be 100% while
-  // in development and sample at a lower rate in production
-  replaysSessionSampleRate: 0.1,
-
-  // You can remove this option if you're not planning to use the Sentry Session Replay feature:
+  // Sentry Session Replay integration
   integrations: [
     Sentry.replayIntegration({
-      // Additional Replay configuration goes in here, for example:
-      maskAllText: true,
-      blockAllMedia: true,
+      maskAllText: true, // Mask sensitive text in session replays
+      blockAllMedia: true, // Block media (e.g., videos, images) in session replays
     }),
   ],
 });
