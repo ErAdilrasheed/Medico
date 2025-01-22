@@ -102,7 +102,7 @@ PATIENT_COLLECTION_ID=
 APPOINTMENT_COLLECTION_ID=
 NEXT_PUBLIC_BUCKET_ID=
 
-NEXT_PUBLIC_ADMIN_PASSKEY=111111
+NEXT_PUBLIC_ADMIN_PASSKEY=274742      // it is my admin password for this deployed application.
 ```
 
 Replace the placeholder values with your actual Appwrite credentials. You can obtain these credentials by signing up on the [Appwrite website](https://appwrite.io/).
